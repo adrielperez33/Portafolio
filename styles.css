@@ -1,3 +1,4 @@
+/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
@@ -6,39 +7,27 @@
     scroll-behavior: smooth;
 }
 
-
+/* Asegurar que toda la pantalla tenga el fondo negro */
 html, body {
     height: 100%;
     width: 100%;
-    min-height: 100vh;
-    background:  #111010
-    background-size: cover; /* Asegura que no se repita */
+    background: linear-gradient(180deg, #000000, #1a1a1a);
     color: #e0e0e0;
     text-align: center;
-    overflow-x: hidden; /
+    overflow-x: hidden; /* Evitar scroll lateral */
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #000000, #1a1a1a) fixed;
-    z-index: -1;
-}
-
+/* Contenedor principal que ocupe todo */
 .container {
     width: 100%;
-    min-height: 100vh; 
+    min-height: 100vh; /* Asegura que ocupe toda la pantalla */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-
+/* Asegurar que las secciones no dejen espacios */
 .section {
     width: 90%;
     max-width: 800px;
@@ -48,4 +37,16 @@ body::before {
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
+}
+
+/* Asegurar que no haya márgenes inesperados */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #000000, #1a1a1a);
+    z-index: -1;
 }
