@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #dcdcdc; /* Gris de fondo */
     color: #333;
     line-height: 1.6;
     padding: 20px;
@@ -16,18 +16,21 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background: linear-gradient(to bottom, #333, #b0b0b0); /* Degradado de negro a gris */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2, h3 {
-    color: #333;
+    color: #fff; /* Blanco para los títulos */
     text-align: center;
 }
 
 .intro, .contact, .skills, .projects, .experience, .education {
     margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+    border-radius: 8px;
+    padding: 20px;
 }
 
 h3 {
