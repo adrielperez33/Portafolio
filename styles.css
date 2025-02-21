@@ -7,14 +7,13 @@
     scroll-behavior: smooth;
 }
 
-/* Fondo degradado sin cortes */
+/* Asegurar que toda la pantalla tenga el fondo negro sin cortes */
 html, body {
     height: 100%;
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(180deg, #000000, #1a1a1a);
     background-attachment: fixed;
-    background-size: 100% 100%;
     color: #e0e0e0;
     text-align: center;
     overflow-x: hidden;
@@ -23,7 +22,7 @@ html, body {
 /* Contenedor principal */
 .container {
     width: 100%;
-    min-height: 100vh; 
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +30,7 @@ html, body {
     padding: 40px 20px;
 }
 
-/* Secciones con efecto Glassmorphism */
+/* Secciones con efecto */
 .section {
     width: 90%;
     max-width: 800px;
@@ -41,28 +40,21 @@ html, body {
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover en secciones */
-.section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-/* Títulos principales */
+/* Títulos */
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: #ffcc00;
+    color: #e6e6e6;
     margin-bottom: 10px;
 }
 
 h2 {
     font-size: 1.8rem;
     font-weight: 500;
-    color: #d1d1d1;
+    color: #a8a8a8;
 }
 
 h3 {
