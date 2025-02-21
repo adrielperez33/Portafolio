@@ -1,4 +1,4 @@
-
+/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +7,20 @@
     scroll-behavior: smooth;
 }
 
-
+/* Fondo degradado sin cortes */
 html, body {
     height: 100%;
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(180deg, #000000, #1a1a1a);
-    background-attachment: fixed; /* Evita que el fondo se mueva con el scroll */
-    background-size: 100% 100%; /* Se ajusta a la pantalla sin repetirse */
+    background-attachment: fixed;
+    background-size: 100% 100%;
     color: #e0e0e0;
     text-align: center;
     overflow-x: hidden;
 }
 
+/* Contenedor principal */
 .container {
     width: 100%;
     min-height: 100vh; 
@@ -27,9 +28,10 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 40px 20px;
 }
 
-
+/* Secciones con efecto Glassmorphism */
 .section {
     width: 90%;
     max-width: 800px;
@@ -39,15 +41,74 @@ html, body {
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #000000, #1a1a1a) fixed;
-    z-index: -1;
+/* Efecto hover en secciones */
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Títulos principales */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #d1d1d1;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Links con efecto */
+a {
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Botón interactivo */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: #1c1c1c;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffd700;
+    transform: scale(1.05);
 }
