@@ -1,0 +1,237 @@
+/* Fondo animado con partículas */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #0d0d0d;
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    z-index: 2;
+    backdrop-filter: blur(6px);
+}
+
+.navbar a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+}
+
+/* Contenido principal */
+.container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 60px; /* para no tapar con navbar */
+    text-align: center;
+    flex-direction: column; 
+}
+
+
+/* Tarjeta de contacto */
+.contact {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    animation: fadeIn 1.2s ease-out;
+    transition: transform 0.3s ease;
+}
+
+.contact:hover {
+    transform: scale(1.03);
+}
+
+.contact h3 {
+    color: #ffcc00;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #e0e0e0;
+}
+
+.contact a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* contacto */
+
+.contact-item {
+    margin-bottom: 25px;
+    text-align: center; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contact-item h4 {
+    color: #ffcc00;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+
+.contact-item p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+}
+
+.contact-item button {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-item button:hover {
+    background-color: #ffd700;
+}
+
+
+/* habilidades */
+/* habilidades */
+.habilidades {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    animation: fadeIn 1.2s ease-out;
+    position: relative;
+    z-index: 10; /* Aseguramos que esté por encima del fondo animado */
+    overflow: visible; /* Para permitir que el contenido se expanda correctamente */
+}
+
+.habilidades h3 {
+    color: #ffcc00;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative; /* Asegura que el texto esté sobre el fondo animado */
+    z-index: 2;
+}
+
+.habilidades-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    min-height: 250px;
+    z-index: 1; /* Asegura que los botones estén por encima del fondo animado */
+}
+
+.habilidad {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    z-index: 5;
+    position: relative;
+}
+
+.habilidad:hover {
+    transform: scale(1.1);
+}
+
+.habilidad.css {
+    background-color: #264de4;
+    color: white;
+}
+
+.habilidad.js {
+    background-color: #f0db4f;
+    color: #323330;
+}
+
+.habilidad.phaser {
+    background-color: #5c2d91;
+}
+
+.habilidad.react {
+    background-color: #61dafb;
+    color: #20232a;
+}
+
+.habilidad.node {
+    background-color: #68a063;
+    color: white;
+}
+
+.habilidad.express {
+    background-color: #303030;
+    color: white;
+}
+
+.habilidad.gsap {
+    background-color: #88ce02;
+    color: #222;
+}
+
+.habilidad.api {
+    background-color: #009688;
+    color: white;
+}
+
+.habilidad.git {
+    background-color: #f1502f;
+    color: white;
+}
+
+.habilidad.uiux {
+    background-color: #ff6f61;
+    color: white;
+}

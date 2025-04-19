@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Educación - Adriel Pérez</title>
+  <link rel="stylesheet" href="styles/paginas.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <nav class="navbar">
+    <a href="index.html">Inicio</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="habilidades.html">Habilidades</a>
+    <a href="proyectos.html">Proyectos</a>
+    <a href="experiencia.html">Experiencia</a>
+    <a href="educacion.html">Educación</a>
+  </nav>
+
+  <div class="container">
+    <div class="contact section">
+      <h3>🎓 Educación</h3>
+      <ul>
+        <li><strong>Tecnicatura en Desarrollo de Software</strong> – En curso</li>
+        <li><strong>Autodidacta</strong> – +100 horas en cursos online (YouTube, Platzi, Udemy)</li>
+        <li><strong>Bachillerato</strong> – Secundario completo</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.2 },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 120, color: "#ffffff", opacity: 0.2, width: 1 },
+        move: { enable: true, speed: 1, random: true, out_mode: "out" }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>

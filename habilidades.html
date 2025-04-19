@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habilidades - Adriel Pérez</title>
+  <link rel="stylesheet" href="styles/paginas.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script> <!-- Cargamos GSAP -->
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <nav class="navbar">
+    <a href="index.html">Inicio</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="habilidades.html">Habilidades</a>
+    <a href="proyectos.html">Proyectos</a>
+    <a href="experiencia.html">Experiencia</a>
+    <a href="educacion.html">Educación</a>
+  </nav>
+
+  <!-- Contenedor para los elementos de habilidades -->
+  <div class="container">
+    <div class="habilidades">
+      <h3>🛠️ Habilidades</h3>
+      <div class="habilidades-list">
+        <button class="habilidad html">HTML</button>
+        <button class="habilidad css">CSS</button>
+        <button class="habilidad js">JavaScript</button>
+        <button class="habilidad react">React</button>
+        <button class="habilidad node">Node.js</button>
+        <button class="habilidad express">Express</button>
+        <button class="habilidad phaser">Phaser</button>
+        <button class="habilidad gsap">GSAP</button>
+        <button class="habilidad api">APIs REST</button>
+        <button class="habilidad git">Git & GitHub</button>
+        <button class="habilidad uiux">UI/UX</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="marioSound" src="assets/audios/mario.mp3"></audio>
+
+  <script>
+    // Partículas de fondo
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.2 },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 120, color: "#ffffff", opacity: 0.2, width: 1 },
+        move: { enable: true, speed: 1, random: true, out_mode: "out" }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+
+    // Interacción con JavaScript
+    const jsBtn = document.querySelector('.habilidad.js');
+jsBtn.addEventListener('click', () => {
+  const container = document.querySelector('.habilidades-list');
+  const containerRect = container.getBoundingClientRect();
+  const btnRect = jsBtn.getBoundingClientRect();
+  const maxX = container.offsetWidth - jsBtn.offsetWidth;
+  const maxY = container.offsetHeight - jsBtn.offsetHeight;
+
+  const x = Math.floor(Math.random() * maxX);
+  const y = Math.floor(Math.random() * maxY);
+
+  jsBtn.style.position = 'absolute';
+  jsBtn.style.left = `${x}px`;
+  jsBtn.style.top = `${y}px`;
+  jsBtn.style.zIndex = '10'; // Aseguramos que esté encima de otros elementos
+
+  // Reiniciar la posición después de 20 segundos
+  setTimeout(() => {
+    jsBtn.style.position = '';
+    jsBtn.style.left = '';
+    jsBtn.style.top = '';
+    jsBtn.style.zIndex = ''; // Restauramos los estilos originales
+  }, 5000); // 5 segundos
+});
+
+    // Interacción con Phaser (Sonido de Mario)
+    const phaserBtn = document.querySelector('.habilidad.phaser');
+    const marioSound = document.getElementById('marioSound');
+    phaserBtn.addEventListener('click', () => {
+      marioSound.currentTime = 0;
+      marioSound.play();
+    });
+
+    // Interacción con HTML
+const htmlBtn = document.querySelector('.habilidad.html');
+htmlBtn.addEventListener('click', () => {
+  const div = document.createElement('div');
+  div.innerHTML = '<code>&lt;h1&gt;Hola Mundo&lt;/h1&gt;</code>';
+  
+  // Estilo para asegurar que esté en la parte superior y visible
+  div.style.position = 'absolute';
+  div.style.color = '#ffcc00';
+  div.style.top = '200px'; // Lo posicionamos 20px desde la parte superior
+  div.style.left = '50%';
+  div.style.transform = 'translateX(-50%)'; // Lo centramos horizontalmente
+  div.style.zIndex = '9999';  // Aseguramos que esté por encima de otros elementos
+  
+  // Aseguramos que se agregue al contenedor adecuado
+  document.body.appendChild(div);
+
+  // Remover el div después de 2 segundos
+  setTimeout(() => div.remove(), 2000);
+});
+
+
+
+    // Interacción con CSS
+    const cssBtn = document.querySelector('.habilidad.css');
+    cssBtn.addEventListener('click', () => {
+      document.querySelector('.habilidades').style.backgroundColor = '#264de4';
+      cssBtn.style.color = 'white';
+      setTimeout(() => {
+        document.querySelector('.habilidades').style.backgroundColor = '';
+        cssBtn.style.color = '';
+      }, 1000);
+    });
+
+    // Interacción con React
+    const reactBtn = document.querySelector('.habilidad.react');
+    reactBtn.addEventListener('click', () => {
+      reactBtn.style.opacity = '0';
+      setTimeout(() => reactBtn.style.opacity = '1', 500);
+    });
+
+    // Interacción con Node.js (Cargando...)
+    const nodeBtn = document.querySelector('.habilidad.node');
+    nodeBtn.addEventListener('click', () => {
+      nodeBtn.textContent = 'Cargando...';
+      setTimeout(() => nodeBtn.textContent = 'Node.js', 1500);
+    });
+
+    // Interacción con Express (Ruta)
+    const expressBtn = document.querySelector('.habilidad.express');
+    expressBtn.addEventListener('click', () => {
+      expressBtn.style.border = '2px solid #5c2d91';
+      setTimeout(() => expressBtn.style.border = '', 500);
+    });
+
+    // Interacción con GSAP (Animación)
+    const gsapBtn = document.querySelector('.habilidad.gsap');
+gsapBtn.addEventListener('click', () => {
+  gsap.to(gsapBtn, { rotation: 360, duration: 1, scale: 1.2, ease: "bounce.out" });  // Animación con GSAP
+
+  // Reiniciar la animación después de 20 segundos
+  setTimeout(() => {
+    gsap.to(gsapBtn, { rotation: 0, scale: 1, duration: 1 }); // Revertimos la animación
+  }, 5000); // 5 segundos
+});
+
+    // Interacción con APIs REST (Cargando datos)
+    const apiBtn = document.querySelector('.habilidad.api');
+    apiBtn.addEventListener('click', () => {
+      apiBtn.textContent = 'Cargando...';
+      setTimeout(() => apiBtn.textContent = 'APIs REST', 1500);
+    });
+
+    // Interacción con Git (Fusión)
+    const gitBtn = document.querySelector('.habilidad.git');
+    gitBtn.addEventListener('click', () => {
+      gitBtn.style.transform = 'scale(0.9)';
+      setTimeout(() => gitBtn.style.transform = '', 500);
+    });
+
+    // Interacción con UI/UX (Cambio de lugar)
+    const uxBtn = document.querySelector('.habilidad.uiux');
+uxBtn.addEventListener('click', () => {
+  uxBtn.style.position = 'absolute';
+  uxBtn.style.left = `${Math.random() * 80}vw`;
+  uxBtn.style.top = `${Math.random() * 80}vh`;
+
+  // Reiniciar la posición después de 20 segundos
+  setTimeout(() => {
+    uxBtn.style.position = '';
+    uxBtn.style.left = '';
+    uxBtn.style.top = '';
+  }, 5000); // 5 segundos
+});
+  </script>
+  
+</body>
+</html>

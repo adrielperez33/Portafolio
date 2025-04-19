@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contacto - Adriel Pérez</title>
+    <link rel="stylesheet" href="styles/paginas.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="habilidades.html">Habilidades</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="experiencia.html">Experiencia</a>
+        <a href="educacion.html">Educación</a>
+    </nav>
+
+    <div class="container">
+        <div class="section contact">
+            <h3>📧 Contacto</h3>
+
+            <div class="contact-item">
+                <h4>📨 Correo Electrónico</h4>
+                <p><a href="mailto:adrielperez227@gmail.com">adrielperez227@gmail.com</a></p>
+            </div>
+
+            <div class="contact-item">
+                <h4>💼 LinkedIn</h4>
+                <p>Conectá conmigo en <strong>LinkedIn</strong> o mirá mi última actividad profesional.</p>
+                <button onclick="abrirVentana('https://www.linkedin.com/in/adriel-perez-ab3266268/')">Abrir LinkedIn</button>
+            </div>
+
+            <div class="contact-item">
+                <h4>💻 GitHub</h4>
+                <p>Explorá mis proyectos y código abierto en <strong>GitHub</strong>.</p>
+                <button onclick="abrirVentana('https://github.com/adrielperez33')">Abrir GitHub</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 80,
+                    density: { enable: true, value_area: 800 }
+                },
+                color: { value: "#ffffff" },
+                shape: {
+                    type: "circle",
+                    stroke: { width: 0, color: "#000000" },
+                },
+                opacity: {
+                    value: 0.2,
+                    random: false,
+                    anim: { enable: false }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: { enable: false }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 120,
+                    color: "#ffffff",
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out"
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    repulse: { distance: 100 },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+
+        function abrirVentana(url) {
+            window.open(url, '_blank', 'width=800,height=600,scrollbars=yes,resizable=yes');
+        }
+    </script>
+</body>
+</html>

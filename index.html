@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adriel Pérez - CV</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
+
+    <!-- Fondo animado con partículas -->
+    <div id="particles-js"></div>
+
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="habilidades.html">Habilidades</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="experiencia.html">Experiencia</a>
+        <a href="educacion.html">Educación</a>
+    </nav>
+
     <div class="container">
         <div class="intro section">
-            <h1>Adriel Pérez</h1>
-            <h2>Full Stack Developer</h2>
-            <p>Desarrollador especializado en backend con experiencia en TypeScript, Node.js y bases de datos relacionales como PostgreSQL y MySQL.</p>
+            <div class="profile-header">
+                <img src="images/adriel.png" alt="Foto de Adriel Pérez" class="profile-img">
+                <div>
+                    <h1>Adriel Pérez</h1>
+                    <h2>Full Stack Developer</h2>
+                </div>
+            </div>
         </div>
 
         <div class="contact section">
@@ -66,5 +83,35 @@
             </ul>
         </div>
     </div>
+
+    <!-- Scripts de partículas -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script>
+       console.log('Particles iniciado');
+
+particlesJS('particles-js', {
+    particles: {
+        number: { value: 50 },
+        color: { value: '#ffffff' },
+        shape: { type: 'circle' },
+        size: { value: 3 },
+        line_linked: {
+            enable: true,
+            color: '#ffffff',
+            opacity: 0.5,
+            width: 1
+        },
+        move: { enable: true, speed: 1 }
+    },
+    interactivity: {
+        events: { onhover: { enable: true, mode: 'repulse' } },
+        modes: { repulse: { distance: 100 } }
+    },
+    retina_detect: true
+});
+
+    </script>
+
 </body>
 </html>
