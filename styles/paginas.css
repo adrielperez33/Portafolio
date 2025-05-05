@@ -235,3 +235,233 @@
     background-color: #ff6f61;
     color: white;
 }
+
+.proyectos-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.proyecto-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    color: #e0e0e0;
+    backdrop-filter: blur(8px);
+}
+
+.proyecto-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 30px rgba(255, 204, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.proyecto-card strong {
+    color: #ffcc00;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.proyecto-card p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.proyecto-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+.proyecto-card:nth-child(1) { animation-delay: 0.2s; }
+.proyecto-card:nth-child(2) { animation-delay: 0.4s; }
+.proyecto-card:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.proyecto-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.1), transparent 60%);
+    pointer-events: none;
+    transition: background 0.2s ease;
+    z-index: 0;
+}
+
+.proyecto-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.proyecto-card:hover::before {
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.2), transparent 60%);
+}
+.experience {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    text-align: left;
+    animation: fadeIn 1.2s ease-out;
+    transition: transform 0.3s ease;
+    max-width: 800px;
+    width: 90%;
+}
+
+.experience:hover {
+    transform: scale(1.02);
+}
+
+.experience h3 {
+    color: #ffcc00;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.timeline {
+    position: relative;
+    margin-left: 20px;
+    border-left: 2px solid #ffcc00;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-marker {
+    width: 14px;
+    height: 14px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    position: absolute;
+    left: -8px;
+    top: 5px;
+    box-shadow: 0 0 10px #ffcc00;
+}
+
+.timeline-content {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.timeline-content:hover {
+    background-color: rgba(255, 204, 0, 0.1);
+    transform: translateX(5px);
+}
+
+.timeline-content h4 {
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+}
+
+.timeline-content .puesto {
+    color: #ffcc00;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.timeline-content p {
+    color: #e0e0e0;
+    margin: 5px 0;
+}
+.education {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    animation: fadeInUp 1.2s ease-out;
+    max-width: 900px;
+    margin: auto;
+}
+
+.education h3 {
+    color: #00d1ff;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.edu-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 209, 255, 0.5);
+}
+
+.edu-icon {
+    font-size: 2rem;
+    color: #00d1ff;
+    flex-shrink: 0;
+    animation: pulse 2s infinite;
+}
+
+.edu-card h4 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.edu-card p {
+    color: #e0e0e0;
+    margin: 4px 0 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
